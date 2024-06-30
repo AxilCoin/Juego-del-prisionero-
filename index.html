@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="WTH.css">
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>El dilema del prisionero</title>
+ </head>
+<body>
+   <h1>   Dilema del pisionero </h1>
+  <div class="Caja">
+  <p>El dilema del prisionero es un problema fundamental de la teoría de juegos que muestra que dos personas pueden no cooperar incluso si ello va en contra del interés de ambas.</p>
+  <h2>Fue desarrollado originariamente por Merrill M. Flood y Melvin Dresher mientras trabajaban en RAND en 1950. Albert W. Tucker formalizó el juego con la frase sobre las recompensas penitenciarias y le dio el nombre del "dilema del prisionero" (Poundstone, 1995).</h2>
+  </div>
+  <div class="Imagen">
+  <img src="Ej.jpeg" alt="Ejemplo" width="80%" height="40%">
+  </div>
+  <h6>(esta imagen es solo para tenerla como referencia sobre el juego)</h6><h1>Concepto</h1>
+    
+    <h4>El dilema del prisionero es un concepto fundamental en la teoría de juegos que explora cómo las decisiones individuales pueden afectar los resultados colectivos. Aquí están los fundamentos principales:<br></h4>
+      <br><h3>1. Contexto del dilema: Imagina que dos criminales son arrestados y encarcelados. Cada uno tiene la opción de cooperar con el otro (no delatar) o traicionarlo (delatarlo a la policía).<br>
+
+        <br>2. Resultados de las decisiones:</li>
+      <br> - Si ambos cooperan, recibirán una sentencia menor (por ejemplo, 1 año de prisión cada uno), ya que la evidencia contra ellos es débil.<br>
+      <br>- Si un prisionero coopera y el otro traiciona, el traidor podría salir libre (0 años) mientras que el que coopera podría enfrentar una sentencia severa (3 años, por ejemplo).<br>
+      <br>- Si ambos traicionan, recibirán una sentencia moderada (2 años cada uno), ya que la evidencia contra ambos es suficiente para condenarlos.<br>
+      <br>3. La paradoja del dilema: Aunque la mejor estrategia para ambos sería cooperar (lo que maximiza su resultado conjunto), el incentivo individual para traicionar es fuerte: si uno coopera y el otro traiciona, el que traiciona obtiene un beneficio mayor.<br>
+      <br>4. Racionalidad y consecuencias: Desde un punto de vista racional, cada prisionero buscará maximizar su propio beneficio personal. Sin embargo, si ambos actúan de esa manera, terminan con un resultado colectivamente peor que si ambos hubieran cooperado.<br>
+      <br>5.Implicaciones más amplias: El dilema del prisionero se aplica a situaciones más allá de las prisiones, como negociaciones comerciales, política internacional, y decisiones económicas. Es un recordatorio de cómo los incentivos individuales pueden chocar con los resultados óptimos para el grupo.<br>
+          <br>En resumen, el dilema del prisionero ilustra cómo las decisiones individuales racionales pueden llevar a resultados subóptimos cuando los participantes no pueden comunicarse y no confían entre sí.</h3>
+</body>
+</html>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: 1px solid #333;
+            background-color: #f0f0f0;
+        }
+        .button:hover {
+            background-color: #ccc;
+        }
+    </style>
+    <h1>Ejemplo</h1>
+    <p>Selecciona la estrategia:</p>
+    <div class="container">
+        <button class="button" onclick="cooperar()">Cooperar</button>
+        <button class="button" onclick="traicionar()">Traicionar</button>
+    </div>
+    <hr>
+    <div id="results">
+        <p>Resultados:</p>
+    </div>
+
+    <script>
+        let decisionP1, decisionP2;
+
+        function cooperar() {
+            decisionP1 = "cooperar";
+            juega();
+        }
+
+        function traicionar() {
+            decisionP1 = "traicionar";
+            juega();
+        }
+
+        function juega() {
+            decisionP2 = Math.random() < 0.5 ? "cooperar" : "traicionar";
+            let resultadoP1, resultadoP2;
+
+            if (decisionP1 === "cooperar" && decisionP2 === "cooperar") {
+                resultadoP1 = "1 año de prisión";
+                resultadoP2 = "1 año de prisión";
+            } else if (decisionP1 === "cooperar" && decisionP2 === "traicionar") {
+                resultadoP1 = "3 años de prisión";
+                resultadoP2 = "0 años de prisión";
+            } else if (decisionP1 === "traicionar" && decisionP2 === "cooperar") {
+                resultadoP1 = "0 años de prisión";
+                resultadoP2 = "3 años de prisión";
+            } else if (decisionP1 === "traicionar" && decisionP2 === "traicionar") {
+                resultadoP1 = "2 años de prisión";
+                resultadoP2 = "2 años de prisión";
+            }
+            let resultsDiv = document.getElementById("results");
+            resultsDiv.innerHTML = `
+                <p>Prisionero 1: Decisión = ${decisionP1}, Resultado = ${resultadoP1}</p>
+                <p>Prisionero 2: Decisión = ${decisionP2}, Resultado = ${resultadoP2}</p>
+            `;
+        }
+    </script>
+<esto de arriba del ejemplo del funcionamiento esta hecho con Chatgpt yo no lo hice>
+  <hr>
+    <div class="Caja2">
+ <p>Independientemente de lo que hagas el otro, ambos o solo tú recibiran una condena pero ¿que pasa si alargamos esto? en vez de ser una sola decision que ¿pasa si es un juego de varias rondas?</p><br>
+ </div>
+  <h3>Pues esto fue lo que hizo Robert Axelrod en 1980 realizo un torneo por computadora invitando a algunos de los teoricos de juegos mas importantes del mundo en distintas areas para presentar programas de computadora que competirian entre si</h3><br>
+  <h3>AxelRod, llamo a estos programas estrategias, cada estrategia se enfretaria a todas las demas estrategias y a una copia de si misma y cada enfrentamiento tendría 200 jugadas, Axelrod uso puntos el objetivo del torneo era ganar los mayores puntos posibles el juego se repitio 5 veces para dar resultados concisos.En total recibio 15 ademas de añadir una que escogia aletoriamente si coperar, o no.</h3><br>
+  <img src="Rs.jpg" alt="Estadisticas" width="90%">
+  <h3>La estrategia que gano fue el programa mas sencillo "Tit for tat", este empieza cooperando y copia el ultimo movimiento de su oponente así coopera cuando el otro lo hace y traiciona solo cuando el otro lo hace esto lo hace una vez y repite esto</h3>
+  <ul></ul><h3>Axelrod descubrio que las estrategias mas eficaces comparte 4 cualidades:</h3><br>
+  <h5><li>Ser bueno</li> </h5>
+  <h4>Esto significa que todas estas siempren cooperan a menos que el otro no lo hagan</h4>
+  <h5><li>Indulgencia</li></h5>
+  <h4>Una estrategia indulgente contra ataca sin embargo no repite esta acción a menos que el enemigo lo haga en otras palabras no guarda rencor</h4>
+  <h5><li>Ser vengativo</li></h5>
+  <h4>Sí tu oponente no coopera as lo mismo inmediatamente no seas pusilanime </h4>
+  <h5><li>Claridad</li></h5>
+  <h4>Ser claro con las intenciones si no se entienden tus intenciones las estrategias no cooperaban pensando en una posible traicion</h4>
+  <h4>Todas estas cualidades las cumplia "Tit for Tat"</h3>
+  <div class="Caja"
+  <h3>Para ver sus aplicaciones y entender todo lo demas se recomienda vez este video</h3>
+  </div>
+  <iframe width="80%" height="265" src="https://www.youtube.com/embed/vBgrvVY1jGo?si=ibWvFtDNL3SaAvAt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <br>
+  <a href="axilyutub@gmail.com" >Correo de contacto</a>
+</body>
+</html>

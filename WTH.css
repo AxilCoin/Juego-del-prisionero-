@@ -1,0 +1,48 @@
+
+.Caja {
+            width: 80%;
+            padding: 18px;
+            border: 2px solid #222222;
+            border-radius: 8px;
+            margin: 10px;
+            justify-content: center;
+            margin-top: 20px;
+}
+.Caja2 {
+            width: 80%;
+            padding: 18px;
+            border: 2px solid #222222;
+            border-radius: 8px;
+            margin: 10px;
+            justify-content: center;
+            margin-top: 10px;
+}
+h1{
+  text-align: center;
+  color: blue;
+}
+
+body {
+              background-color:#5F9EA0;
+}
+p{
+  color:white;
+}
+h2{
+  font-size: 18px;
+  text-align: left;
+  color: white;
+}
+h4{
+  color: white;
+}
+h5{
+  text-align: center;
+  font-size: 22px;
+}
+h6{
+  color: white;
+}
+.Imagen{
+  text-align: center;
+}
